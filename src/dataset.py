@@ -39,7 +39,7 @@ class TrainDataset(Dataset):
 
         self.x, self.y = shuffle(self.x, self.y, random_state=42)
 
-        self.counter = Counter(self.y)
+        self.counter = Counter(self.y)#求数组中每个数字出现了几次
 
     def __len__(self):
         return len(self.x)
