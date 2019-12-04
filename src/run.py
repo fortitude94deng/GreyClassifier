@@ -152,6 +152,12 @@ if __name__ == "__main__":
 
 
     checkpoints = sorted(glob.glob(LOGGER + "/*.tar"))
+    '''
+    #获取指定目录下的所有图片
+    print (glob.glob(r"/home/qiaoyunhao/*/*.png"),"\n")#加上r让字符串不转义
+    #获取上级目录的所有.py文件
+    print (glob.glob(r'../*.py')) #相对路径
+    '''
     models = [load_model(ch, num_channels=num_channels, num_classes=num_classes) for ch in checkpoints]
 
     if not os.path.exists('xgbdata/'):
